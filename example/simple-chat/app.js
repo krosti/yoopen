@@ -21,6 +21,7 @@ chat = require('../../lib/chat.io').createChat(sio.of('/chat'));
 
 sio.configure(function () {
   sio.of('/chat').authorization(function(handshake, callback) {
+    //guardar el usuario que entra
     handshake.nickname = 'Guest' + counter++;
     callback(null, true);
   });

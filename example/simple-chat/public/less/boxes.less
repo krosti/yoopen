@@ -1,0 +1,776 @@
+.box{
+	min-width: 100%;
+	min-height: 100%;
+	border: 1px solid;
+	margin-top: 5px;
+	border:none;
+
+	.boxgrid {
+		background-color: @white;
+		border: 1px solid @inputBorder;
+		.border-radius(0px 10px 10px 0px);
+		.box-shadow(1px 2px 6px @deloitteGray2);
+		width: 95%;
+		height: 100%;
+		min-height: 150px;
+		margin-bottom:20px;
+
+		table {
+			width: 100%;
+			height: 150px;
+			text-align: center;
+			font-size: 10px;
+			margin-top: 8px;
+			margin-bottom: 8px;
+
+			tr {
+				td {
+					border-right:1px inset @grayLight;
+				}	
+			}
+
+			tr:nth-child(odd) {
+				font-weight:bold;
+				td {
+					.box-shadow(inset 0px -10px 8px @grayLighter);
+					height:15%;
+				}
+				border-bottom:1px inset @grayLight;
+			}
+
+			tr:nth-child(even) td {
+				vertical-align:top;
+				color:@deloitteGray;
+			}
+
+			.last {
+				width:15%;
+				border-right:none;
+			}
+
+			.lastText {
+				cursor:pointer;
+				vertical-align:middle!important;
+				color:@black!important;
+				font-weight:bold;
+				i {
+					color:@deloitteBlue!important;
+				}
+			}
+
+			.top {
+				border-top:1px inset @grayLight;
+			}
+		}
+	}
+
+	.boxgrid-mng {
+		background-color: @white;
+		border: 1px solid @inputBorder;
+		.border-radius(0px 10px 10px 0px);
+		.box-shadow(1px 2px 6px @deloitteGray2);
+		width: 95%;
+
+		table {
+			width:100%;
+			height: 100%;
+			margin-top:8px;
+
+			thead {
+				.top {
+					z-index:5;
+					position: relative;
+				}
+
+				tr:first-child {
+					border-bottom:1px inset @grayLight;
+
+					th {
+						text-align:left;
+						font-weight:bold;
+						.box-shadow(inset 0px -10px 8px @grayLighter);
+						height:15%;
+						border-right:1px inset @grayLight;
+						font-size: 12px;
+						padding-left:20px;
+						cursor:pointer;		
+						
+						i {
+							padding-left:5px;
+						}				
+					}
+
+					th:nth-child(3), th:nth-child(4) {
+						text-align:center;
+						padding-left:0px;
+					}
+
+					th:last-child {
+						border-right:none;
+					}
+				}
+
+				tr:nth-child(2) {
+					th {
+						text-align:left;
+						font-weight:bold;
+
+						height:15%;
+						border-right:1px inset @grayLight;
+						font-size: 12px;
+						padding-left:20px;
+						cursor:pointer;				
+					}
+
+					th:nth-child(3), th:nth-child(4) {
+						text-align:center;
+						padding-left:0px;
+					}
+
+					th:last-child {
+						border-right:none;
+					}
+				}
+			}
+
+			tr {
+				height:30px;
+				
+				td {
+					color:@deloitteGray;
+					font-size: 11px;
+					border-right:1px inset @grayLight;
+					padding-left:20px;
+				}	
+
+				td:nth-child(3), td:nth-child(4) {
+					text-align:center;
+					padding-left:0px;
+				}
+
+
+				td:last-child {
+					border-right:none;
+				}
+			}
+
+			tr:nth-child(even) td {
+				color:@deloitteGray;
+				background-color:@grayLighter;
+			}
+
+			tr:nth-child(odd) td {
+				border-top:1px inset @grayLight;
+				border-bottom:1px inset @grayLight;
+			}
+
+			tr:last-child td {
+				border-bottom:none;
+			}
+
+			.edit-icon {
+				color:@white;
+				background-color:@deloitteBlue2;
+				font-size:16px;
+				padding:2px;
+				.border-radius(5px);
+				cursor:pointer;
+			}
+
+			.edit-icon-active {
+				color:@white;
+				background-color:@deloitteGray2;
+				font-size:16px;
+				padding:2px;
+				.border-radius(5px);
+			}
+
+			.check {
+				display:none;
+				input {
+					cursor:default!important;
+					box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+				}
+			}
+
+
+		}
+
+		#rowFilter {
+			
+			.filter-resource-role {
+				padding-top:5px;
+				margin-left:-7px!important;
+			}
+
+			.filter-resource-resp {
+				padding-top:5px;
+			}
+
+			.filter-resource-check {
+				i {
+					padding-top:10px;
+					padding-left:5px;
+					vertical-align:middle;
+				}
+			}
+		}
+
+
+		.dataTables_wrapper {
+			.dataTables_length, .dataTables_filter, .dataTables_info {
+				display:none!Important;
+			}
+
+			#resourceTable_paginate {
+				margin-top:30px;
+				a{
+					padding: 10px;
+					cursor: pointer;
+					&:hover{
+						background: #f5f5f5;
+						text-decoration: none;
+					}
+				}
+				#resourceTable_last, #resourceTable_first {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.boxgrid-form	{
+		background-color: @white;
+		border: 1px solid @inputBorder;
+		.border-radius(0px 10px 10px 0px);
+		.box-shadow(1px 2px 6px @deloitteGray2);
+		width: 90%;
+		height: 100%;
+		padding-left:20px;
+
+		.row  {
+			width: 100%;
+			height: 40px;
+			padding-left:20px;
+			margin-bottom:10px;
+			h1 {
+				font-size:20px;
+			}
+
+		}
+
+		div:first-child.span6 {
+			border-right: 1px solid @inputBorder;
+		}
+
+		input[type="checkbox"] {
+		    display:none;
+		}
+		label{
+			font-size: 11px;
+		}
+
+		.row-fluid {
+			width: 95%;
+			font-size:10px;
+
+			span {
+				font-weight:bold;
+			}
+			input {
+				font-weight:normal;
+			}
+
+			.span6 {			
+
+				.block {
+					display:block;
+				}
+
+
+				div {
+					margin-bottom:5px;
+				}
+
+				.inline {
+					display:inline;
+				}
+
+			}
+		
+			input[type="checkbox"] {
+				margin-right:10px;
+				padding-top:5px;
+			}
+
+			div.without-border {
+				border:none;
+			}
+
+		}
+
+		.row-fluid-comment {
+			padding-bottom:10px;
+			margin-bottom:20px;
+			margin-top:-5px;
+			border-bottom: 1px solid @inputBorder;
+		}
+
+	}
+
+
+	.leftlabel {
+		width: 4%;
+		height: 100%;
+		min-height: 165px;
+		margin-top: 1px;
+		border-right:none;
+		opacity: 0.9;
+		.box-shadow(1px 2px 6px @deloitteGray2);
+
+		.border-radius(10px 0px 0px 10px);
+		
+		i {
+			padding-left:7px;
+			color:@deloitteBlue2;
+			float: left;
+			margin-top: 6px;
+		}
+
+		.active {
+			color:@white;
+		}
+	}
+
+
+	.bluelabel {
+		#gradient > .horizontal(@deloitteBlue1, darken(@deloitteBlue, 5%));
+		border-right:2px solid @deloitteBlue2!important;
+		border: 1px solid @deloitteBlue;
+	}
+
+	.graylabel {
+		#gradient > .horizontal(@grayLight, darken(@gray, 5%));
+		border-right:2px solid @grayDark!important;
+		border: 1px solid @grayLight;
+	}
+
+}
+
+.box-top {
+	min-width: 100%;
+	min-height: 100px;
+	border: 1px solid;
+	border:none;
+	height: 90px;
+
+	.boxgrid-top {
+		background-color: @white;
+		border: 1px solid @inputBorder;
+		.border-radius(10px 10px 10px 10px);
+		.box-shadow(1px 1px 1px @grayLight);
+		width: 100%;
+		height: 100%;
+
+		img {
+			padding:8px 0px 8px 8px;
+		}
+	}
+
+	.user {
+		width:40%;
+
+
+		.box-text {
+			margin:14px 0px 0px 15px;
+
+			p {
+				margin:0px;
+				color:@deloitteGray;
+			}
+
+			p:first-child {
+				color:@deloitteBlue;
+			}
+		}
+	}
+
+	.actions {
+		margin-top:5px;
+		width:60%;
+
+		ul li {
+			padding:4px 15px 0px 3px;
+		}
+	}
+}
+
+.box-top-form {
+	margin-bottom: 20px;
+	width:100%;
+	text-align:center;
+	background:  url("@{bodyBackgroundSource}") repeat;
+
+	ul {
+
+		li {
+			cursor:pointer;
+			width:100%;
+			height:20px;
+			display: inline;
+			padding:auto;
+			margin:auto;
+			padding-right:40px;
+			font-size:12px;
+		}
+	}
+
+	hr {
+		margin:0px;
+	}
+
+	.active {
+		color:@deloitteBlue;
+	}
+}
+
+.box-filter {
+	margin-top:20px;
+	margin-right: 5px;
+	margin-bottom:-5px;
+
+	.dropdown-menu {
+		li {
+			padding-left:10px!important;
+			width:130px!important;
+		}
+	}
+
+	ul li {
+		margin:0px!important;
+		padding:0px!important;
+	}
+
+
+	.box-shortby {
+		text-align:right;
+		font-size:12px;
+		font-weight:bold;
+		padding-right:10px;
+	}
+
+	.sort {
+		margin-top:5px;
+		border-right:1px solid @deloitteGray2;
+		height:25px;
+		padding-right:10px;
+
+		.input, .add-on {
+			background:@white;
+			height:15px!important;
+			box-shadow:none!important;
+			border: 1px solid @inputBorder;
+			cursor:default;
+		}
+
+		.input {
+			width:130px;
+			border-right:none;
+		}
+
+		.add-on {
+			border-left:none;
+			font-size:10px;
+			padding-top:-5px;
+			cursor:pointer;
+		}
+	}
+
+
+	.search {
+		margin-top:5px;
+		padding-right:10px;
+		padding-left:10px;
+		border-right:1px solid @deloitteGray2;
+		height:25px;
+		.input, .add-on {
+			background:@white;
+			height:15px!important;
+			box-shadow:none!important;
+			border: 1px solid @inputBorder;
+			cursor:default;
+		}
+
+		.input {
+			width:250px;
+			border-right:none;
+		}
+
+		.add-on {
+			border-left:none;
+			font-size:10px;
+			padding-top:-5px;
+			cursor:pointer;
+		}
+	}
+
+
+	.filter {
+		cursor:pointer;
+		padding-left:10px;
+		color: @deloitteBlue;
+	}
+
+	.filter-resource {
+		padding-right:10px;
+		cursor:pointer;
+		padding-left:10px;
+		color: @deloitteBlue;
+	}
+}
+
+
+.navbar {
+	.box-img {
+		padding:8px 8px 8px 0px;
+		img {
+			width:30px;
+			height:30px;
+			cursor:pointer;
+		}
+	}
+}
+
+
+.attr {
+	height: 430px;
+
+	.pro span {
+		margin-left:10px;
+	}
+}
+
+.contact {
+	height: 250px;
+}
+
+.timeline {
+	height: 130px;
+
+	.bluelabel {
+		height: 130px;
+		min-height: 130px;
+	}
+}
+
+.separate {
+	margin-bottom:15px;
+}
+
+.specification {
+	height: 540px;
+	.border-bottom {
+		border-bottom: 1px solid @inputBorder;
+	}
+
+	ul.special {
+		margin-right:10px;
+	}
+
+	.special {
+		list-style-type:none;
+		color:@gray;
+		li input {
+			padding-top:-2px;
+			display:inline;
+		}
+	}
+
+	.multiple-check {
+
+		.special {
+			width:180px;
+		}
+	}
+
+
+	.border-right {
+		height: 100px;
+		border-right: 1px solid @inputBorder;
+	}
+	.comment-eng-name {
+		span {
+			font-weight:normal;
+			font-style:italic;
+			color:@grayLight;
+		}
+		span.black {
+			color:@grayDark;
+		}
+	}
+
+}
+
+.aproach {
+	height: 1100px;
+
+	h2 {
+		font-size:15px;
+		padding:0px;
+		margin:0px;
+		line-height:20px;
+	}
+
+	ul {
+		li {
+			color:@gray;
+			font-size:12px;
+
+			input {
+				margin-top:-2px;
+			}
+		}
+
+	}
+
+	.hidden {
+		display:none;
+	}
+
+	.boxgrid-form .row-fluid {
+		margin-left:10px;
+		width:700px;
+		padding-bottom:10px;
+		margin-bottom:20px;
+
+		span {
+			font-weight:normal;
+			color:@gray;
+		}
+	}
+
+	.border-bottom {
+		border-bottom: 1px solid @inputBorder;
+	}
+
+	.special {
+		list-style-type:none;
+		color:@gray;
+
+		li {
+			width:200px;
+		}
+		li input {
+			padding-top:-2px;
+		}
+	}
+	
+}
+
+.attachments {
+	height: 280px;
+
+	.bluelabel {
+		height: 280px;
+		min-height: 280px;
+	}
+
+	.upload-file {
+		cursor:pointer;
+		
+		i {
+			color:@green;
+		}
+	}
+
+	.row-fluid:nth-child(3) {
+		.span7:first-child {
+			margin-left:40px;
+			color:@gray;
+			font-weight:bold;
+
+		}
+		i {
+			color:@red;
+			margin-right:10px;
+		}
+	}
+}
+
+.managment {
+	height: 330px;
+
+	span {
+		display:block;
+	}
+
+	.row-fluid [class*="span"] {
+		margin:0px;
+	}
+	
+	.sep {
+		margin-bottom:10px;
+	}
+}
+
+.modal-request.modal.fade.in {
+	top:11%;
+	left:63.6%;
+}
+
+.modal-request {
+	height:135px;
+	width:537px;
+	.border-radius(11px 11px 11px 11px);
+	border:none;
+	box-shadow:none;
+	background-color:@grayLight2;
+
+	h1 {
+		font-size:13px;
+	}
+	.row {
+		margin:0px;
+		div:nth-child(1) {
+			height:135px;
+			width:417px;
+			border-right:1px inset @grayLight;
+			.border-radius(10px 0px 0px 10px);
+			margin-right:1px;
+
+			h1 {
+				margin:0px;
+				margin-top:8px;
+				padding-left:20px;
+			}
+
+			ul {
+				padding-left:35px;
+				color:@gray;
+				font-size:13px;
+			}
+		}
+
+		div:nth-child(2) {
+			height:135px;
+			width:118px;
+			background-image: url('../img/backgroundNewRequest.png');
+			.border-radius(0px 10px 10px 0px);
+			cursor:pointer;
+
+			p:first-child {
+				background-image: url('../img/createNewFormHover.png');
+				color: #10a7e0 !important;
+				width: 30px;
+				height: 43px;
+				margin: 30% 0px 0px 35%;
+			}
+			
+			.text {
+				font-size:10px;
+				color:@white;
+				margin-left:10px;
+			}
+		}
+	}
+}

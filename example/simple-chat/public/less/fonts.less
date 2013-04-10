@@ -1,0 +1,75 @@
+//
+// fonts override.
+// --------------------------------------------------
+// All about fonts will be found here. The idea was redefine the variables
+// present in bootsrap so we can easily upgrade it without affects the
+// configurations.
+//
+
+// Configuration
+// -------------------------
+@fontsRootPath: "fonts";
+
+// @font-face definitions
+// -------------------------
+@font-face {
+    font-family: "Frutiger Next Pro";
+    font-style: normal;
+    font-weight: normal;
+    src: url("@{fontsRootPath}/FrutigerNextPro-Medium.otf") format("opentype"),
+	 url("@{fontsRootPath}/FrutigerNextPro-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Frutiger Next Pro";
+    font-style: italic;
+    font-weight: normal;
+    src: url("@{fontsRootPath}/FrutigerNextPro-MediumIta.otf") format("opentype"),
+	 url("@{fontsRootPath}/FrutigerNextPro-MediumIta.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Frutiger Next Pro";
+    font-style: normal;
+    font-weight: bold;
+    src: url("@{fontsRootPath}/FrutigerNextPro-Bold.otf") format("opentype"),
+	 url("@{fontsRootPath}/FrutigerNextPro-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Frutiger Next Pro";
+    font-style: italic;
+    font-weight: bold;
+    src: url("@{fontsRootPath}/FrutigerNextPro-BoldIta.otf") format("opentype"),
+	 url("@{fontsRootPath}/FrutigerNextPro-BoldIta.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Frutiger Next Pro";
+    font-style: normal;
+    font-weight: lighter;
+    src: url("@{fontsRootPath}/FrutigerNextPro-Light.otf") format("opentype"),
+	 url("@{fontsRootPath}/FrutigerNextPro-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Frutiger Next Pro";
+    font-style: italic;
+    font-weight: lighter;
+    src: url("@{fontsRootPath}/FrutigerNextPro-LightIta.otf") format("opentype"),
+	 url("@{fontsRootPath}/FrutigerNextPro-LightIta.woff") format("woff");
+}
+
+// Typography overrides
+// -------------------------
+// @see vendor/bootstrap/less/variables.less for more information about this variables
+// @description override TwitterBootstrap base fonts variables
+//
+//@sansFontFamily:   "Frutiger Next Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/*
+* @name fontOutput @baseFontFamily
+*/
+//@baseFontFamily:        @sansFontFamily;
+@baseFontSize:          16px;
+@baseLineHeight:        @baseFontSize * 1.5;

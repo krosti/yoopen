@@ -5,7 +5,7 @@ chat = {
 		debug: true,
 
 		chatBar: $('#chatBar')
-	}
+	},
 
 	/*
 	* Iniciar servidor de Chat.

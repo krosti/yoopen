@@ -1,0 +1,140 @@
+.ui-widget-header	{
+	#gradient > .horizontal(@deloitteBlue1, darken(@deloitteBlue, 5%))!important;
+	border: 1px solid @deloitteBlue;
+}
+
+.ui-dialog-buttonpane {
+	width:100%;
+	height:35px;
+
+	.ui-dialog-buttonset button {
+		width:80px;
+		height:20px;
+
+		span {
+			padding:0px!important;
+			font-size:10px!important;
+		}
+	}	
+}
+
+.ui-dialog {
+	.ui-dialog-titlebar-close span.ui-icon-closethick{
+		margin:-8px 0px 0px -9px;
+	}
+
+	.ui-dialog-content.ui-widget-content	{
+		padding:0px;
+		margin:0px;
+	}
+
+	.dialog-edit {
+		
+		border:none!important;
+
+		table {
+			width:100%;
+			height:80px;
+			margin-top:8px;
+
+			thead {
+				tr th div {
+					z-index:5;
+					position: relative;
+				}
+
+				tr:first-child {
+					border-bottom:1px inset @grayLight;
+
+					th {
+						text-align:left;
+						font-weight:bold;
+						.box-shadow(inset 0px -10px 8px @grayLighter);
+						height:15%;
+						border-right:1px inset @grayLight;
+						font-size: 12px;
+						padding-left:20px;
+						cursor:pointer;		
+						
+						i {
+							padding-left:5px;
+						}				
+					}
+
+					th:nth-child(3), th:nth-child(4) {
+						text-align:center;
+						padding-left:0px;
+					}
+
+					th:last-child {
+						border-right:none;
+					}
+				}
+
+				tr:nth-child(2) {
+					th {
+						text-align:left;
+						font-weight:bold;
+
+						height:15%;
+						border-right:1px inset @grayLight;
+						font-size: 12px;
+						padding-left:20px;
+						cursor:pointer;				
+					}
+
+					th:nth-child(3), th:nth-child(4) {
+						text-align:center;
+						padding-left:0px;
+					}
+
+					th:last-child {
+						border-right:none;
+					}
+				}
+			}
+
+			tbody {
+
+				tr {
+					height:61px;
+					vertical-align:top;
+
+					td {
+						color:@deloitteGray;
+						font-size: 11px;
+						border-right:1px inset @grayLight;
+						padding-left:20px;
+					}	
+
+					td:nth-child(3), td:nth-child(4) {
+						text-align:center;
+						padding-left:0px;						
+					}
+
+					td:first-child {
+						width:300px;
+					}
+
+					td:last-child {
+						border-right:none;
+						width:150px;
+					}
+
+					div {
+						margin-top:10px;
+					}
+				}
+
+				tr:nth-child(odd) td {
+					border-top:1px inset @grayLight;
+				}
+
+				.input-large {
+					width:250px;
+				}
+			}
+
+		}
+	}
+}
